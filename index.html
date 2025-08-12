@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="./src/index.css" />
     <script type="module" src="/src/my-element.ts"></script>
     <script type="module" src="/src/sn-input.ts"></script>
-    <script type="module" src="/src/button.ts"></script>
+    <script type="module" src="/src/button/button.ts"></script>
   </head>
   <body>
 
 <h1>Variant</h1>
+    <sn-button disabled>Default</sn-button>
     <sn-button>Default</sn-button>
     <sn-button variant="primary">Primary</sn-button>
     <sn-button variant="dashed">Dashed</sn-button>
@@ -42,5 +43,8 @@
     <sn-button shape="pill" prefix="$" suffix="#"> 
       Amount 
     </sn-button>
+
+    <h1>block</h1>
+        <sn-button block>Default</sn-button>
   </body>
 </html>

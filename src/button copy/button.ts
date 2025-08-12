@@ -1,99 +1,13 @@
-import { LitElement, css, html, nothing } from "lit";
+import { LitElement, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { when } from "lit/directives/when.js";
+import css from "./button.style";
 @customElement("sn-button")
 export class Button extends LitElement {
   @state()
   private hasPrefixSlot = false;
   private hasSuffixSlot = false;
-  static styles = css`
-    :host {
-      display: inline-block;
-      vertical-align: top;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      border: 1px solid transparent;
-      padding: 0px;
-      background-color: transparent;
-    }
-    .btn.btn--medium {
-      min-height: 2rem;
-    }
-    .btn.btn--small {
-      min-height: 1.5rem;
-    }
-    .btn.btn--large {
-      min-height: 2.5rem;
-    }
-    .btn.btn--default {
-      background-color: var(--foreground);
-      border-color: var(--border);
-    }
-    .btn.btn--dashed {
-      background-color: var(--foreground);
-      border-color: var(--border);
-      border-style: dashed;
-    }
-    .btn.btn--primary {
-      border-color: var(--primary);
-      background-color: var(--primary);
-      color: var(--foreground);
-    }
-    .btn.btn--link {
-      color: var(--primary);
-    }
-    .btn__label {
-      display: inline-block;
-    }
-    .btn.btn--small .btn__label {
-      padding: 0px 0.75rem;
-    }
-    .btn.btn--medium .btn__label {
-      padding: 0px 1rem;
-    }
-    .btn.btn--large .btn__label {
-      padding: 0px 1.25rem;
-    }
-    .btn.btn--pill {
-      border-radius: 9999rem;
-    }
-    .btn.btn--small.btn--round {
-      border-radius: 0.25rem;
-    }
-    .btn.btn--medium.btn--round {
-      border-radius: 0.25rem;
-    }
-    .btn.btn--large.btn--round {
-      border-radius: 0.25rem;
-    }
-    .btn.btn--circle {
-      border-radius: 9999rem;
-      justify-content: center;
-    }
-    .btn.btn--medium.btn--circle {
-      min-width: 2rem;
-    }
-    .btn.btn--small.btn--circle {
-      min-width: 1.5rem;
-    }
-    .btn.btn--large.btn--circle {
-      min-width: 2.5rem;
-    }
-    .btn .btn__prefix.active,
-    .btn .btn__suffix.active {
-      display: block;
-    }
-    .btn .btn__prefix {
-      margin-left: 10px;
-      display: none;
-    }
-    .btn .btn__suffix {
-      margin-right: 10px;
-      display: none;
-    }
-  `;
+  static styles =  css
   @property()
   label?: string;
   @property()
@@ -106,6 +20,9 @@ export class Button extends LitElement {
   prefix: any;
   @property()
   suffix: any;
+  @property({ type: Boolean, reflect: true }) block = false;
+  @property({ type: Boolean, reflect: true }) disabled = false;
+  @property({ type: Boolean, reflect: true }) loading = false;
   private variantClass(): string {
     switch (this.variant) {
       case "primary":
@@ -142,7 +59,7 @@ export class Button extends LitElement {
   }
   render() {
     return html`
-      <button class="btn ${this.variantClass()} ${this.sizeClass()} ${this.shapeClass()}">
+      <button class="btn ${this.variantClass()} ${this.sizeClass()} ${this.shapeClass()} ${this.block ? 'btn--block': ''}" ?disabled=${this.disabled}>
         <span class="btn__prefix ${this.prefix || this.hasPrefixSlot ? "active" : nothing}"
           ><slot
             name="prefix"
