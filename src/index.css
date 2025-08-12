@@ -1,5 +1,13 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 body{
     font-family: sans-serif;
 }
-
+ */
+ body{
+    background-color: #eee;
+ }
+:root{
+    --foreground:white;
+    --primary:#1890ff;
+    --border:#ccc;
+}
