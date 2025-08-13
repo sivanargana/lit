@@ -6,68 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + Lit + TS</title>
   <link rel="stylesheet" href="./src/index.css" /> 
-  <script type="module" src="/src/button/button.ts"></script>
+  <script type="module" src="/src/button/index.ts"></script>
+  <script type="module" src="/src/spinner/index.ts"></script>
+  <script type="module" src="/src/card/index.ts"></script>
 </head>
 <body>
-  <h3>Basic</h3>
-  <msr-button>Button</msr-button>
-  <h3>Variants</h3>
-  <msr-button variant="default">Default</msr-button>
-  <msr-button variant="primary">Primary</msr-button>
-  <msr-button variant="success">Success</msr-button>
-  <msr-button variant="neutral">Neutral</msr-button>
-  <msr-button variant="warning">Warning</msr-button>
-  <msr-button variant="danger">Danger</msr-button>
-  <h3>Sizes</h3>
-  <msr-button size="small">Small</msr-button>
-  <msr-button size="medium">Medium</msr-button>
-  <msr-button size="large">Large</msr-button>
-  <h3>Outlined</h3>
-  <msr-button variant="default" outline>Default</msr-button>
-  <msr-button variant="primary" outline>Primary</msr-button>
-  <msr-button variant="success" outline>Success</msr-button>
-  <msr-button variant="neutral" outline>Neutral</msr-button>
-  <msr-button variant="warning" outline>Warning</msr-button>
-  <msr-button variant="danger" outline>Danger</msr-button>
-  <h3>Pill </h3>
-  <msr-button size="small" pill>Small</msr-button>
-  <msr-button size="medium" pill>Medium</msr-button>
-  <msr-button size="large" pill>Large</msr-button>
-  <h3>Circle</h3>
-  <msr-button variant="default" size="small" circle>🔥</msr-button>
-  <msr-button variant="default" size="medium" circle>🔥</msr-button>
-  <msr-button variant="default" size="large" circle>🔥</msr-button>
-  <h3>Text</h3>
-  <msr-button variant="text" size="small">Text</msr-button>
-  <msr-button variant="text" size="medium">Text</msr-button>
-  <msr-button variant="text" size="large">Text</msr-button>
-  <h3>Link</h3>
-  <msr-button href="https://example.com/">Link</msr-button>
-  <msr-button href="https://example.com/" target="_blank">New Window</msr-button>
-  <msr-button href="/assets/images/wordmark.svg" download="shoelace.svg">Download</msr-button>
-  <msr-button href="https://example.com/" disabled>Disabled</msr-button>
-    <h3>Prefix & Suffix</h3>
-  <msr-button>
-    Both
-    <span slot="prefix">🔥</span>
-    <span slot="suffix">❯</span>
-  </msr-button>
-  <msr-button>
-    Prefix
-    <span slot="prefix">🔥</span> 
-  </msr-button>
-  <msr-button>
-    Suffix
-    <span slot="suffix">🔥</span> 
-  </msr-button>
-  <a href="" target=""></a>
-      <h3>Loading</h3>
+ 
+<div class="max-w-[1000px] mx-auto p-5 flex flex-col gap-5">
+  <msr-card>
+    <h3>Basic</h3>
+  <msr-button>Button
 
-      <msr-button variant="default" loading>Default</msr-button>
-<msr-button variant="primary" loading>Primary</msr-button>
-<msr-button variant="success" loading>Success</msr-button>
-<msr-button variant="neutral" loading>Neutral</msr-button>
-<msr-button variant="warning" loading>Warning</msr-button>
-<msr-button variant="danger" loading>Danger</msr-button>
+  </msr-button>
+</msr-card>
+  <msr-card>
+    <h3>Variants</h3>
+    <msr-button variant="default">Default</msr-button>
+    <msr-button variant="primary">Primary</msr-button>
+    <msr-button variant="success">Success</msr-button>
+    <msr-button variant="neutral">Neutral</msr-button>
+    <msr-button variant="warning">Warning</msr-button>
+    <msr-button variant="danger">Danger</msr-button>
+  </msr-card>
+  <msr-card>
+    <h3>Sizes</h3>
+    <msr-button size="small">Small</msr-button>
+    <msr-button size="medium">Medium</msr-button>
+    <msr-button size="large">Large</msr-button>
+  </msr-card>
+  <msr-card>
+    <h3>Outlined</h3>
+    <msr-button variant="default" outline>Default</msr-button>
+    <msr-button variant="primary" outline>Primary</msr-button>
+    <msr-button variant="success" outline>Success</msr-button>
+    <msr-button variant="neutral" outline>Neutral</msr-button>
+    <msr-button variant="warning" outline>Warning</msr-button>
+    <msr-button variant="danger" outline>Danger</msr-button>
+  </msr-card>
+  <msr-card>
+    <h3>Pill </h3>
+    <msr-button size="small" pill>Small</msr-button>
+    <msr-button size="medium" pill>Medium</msr-button>
+    <msr-button size="large" pill>Large</msr-button>
+  </msr-card>
+  <msr-card>
+    <h3>Circle</h3>
+    <msr-button variant="default" size="small" circle>🔥</msr-button>
+    <msr-button variant="default" size="medium" circle>🔥</msr-button>
+    <msr-button variant="default" size="large" circle>🔥</msr-button>
+  </msr-card>
+  <msr-card>
+    <h3>Text</h3>
+    <msr-button variant="text" size="small">Text</msr-button>
+    <msr-button variant="text" size="medium">Text</msr-button>
+    <msr-button variant="text" size="large">Text</msr-button>
+  </msr-card>
+  <msr-card>
+    <h3>Link</h3>
+    <msr-button href="https://example.com/">Link</msr-button>
+    <msr-button href="https://example.com/" target="_blank">New Window</msr-button>
+    <msr-button href="/assets/images/wordmark.svg" download="shoelace.svg">Download</msr-button>
+    <msr-button href="https://example.com/" disabled>Disabled</msr-button>
+  </msr-card>
+    <msr-card>
+      <h3>Prefix & Suffix</h3>
+        <msr-button>
+      Both
+      <span slot="prefix">🔥</span>
+      <span slot="suffix">❯</span>
+        </msr-button>
+        <msr-button>
+      Prefix
+      <span slot="prefix">🔥</span> 
+        </msr-button>
+        <msr-button>
+      Suffix
+      <span slot="suffix">🔥</span> 
+        </msr-button>
+        <a href="" target=""></a>
+    </msr-card>
+      <msr-card>
+        <h3>Loading</h3>
+        <msr-button variant="default" loading>Default</msr-button>
+        <msr-button variant="primary" loading>Primary</msr-button>
+        <msr-button variant="success" loading>Success</msr-button>
+        <msr-button variant="neutral" loading>Neutral</msr-button>
+        <msr-button variant="warning" loading>Warning</msr-button>
+        <msr-button variant="danger" loading>Danger</msr-button>
+      </msr-card>
+</div>
 </body>
 </html>

@@ -3,10 +3,12 @@ import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { html, literal } from "lit/static-html.js";
-import css from "./button.style";
+import "../spinner/index";
+import hostCss from "../host/style";
+import componentCss from "./style";
 @customElement("msr-button")
 export class Button extends LitElement {
-  static styles = css;
+  static styles = [hostCss,componentCss];
   @state() private hasPrefix = false;
   @state() private hasSuffix = false;
   @state() private hasLabel = false;
@@ -57,7 +59,7 @@ export class Button extends LitElement {
       ><slot name="prefix" class="btn__prefix" @slotchange=${(e: any) => this.hasPrefix = this.checkSlot(e)}></slot>
         <slot class="btn__label" @slotchange=${(e: any) => this.hasLabel = this.checkSlot(e)}></slot>
         <slot name="suffix" class="btn__suffix" @slotchange=${(e: any) => this.hasSuffix = this.checkSlot(e)}></slot>
-         ${this.loading ? html`💡` : nothing}
+         ${this.loading ? html`<msr-spinner></msr-spinner>` : nothing}
        </${tag}>
     `;
   }
