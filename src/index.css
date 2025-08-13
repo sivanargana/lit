@@ -5,13 +5,74 @@
     background-color: #eee;
  }
 :root{
-    --font-family:"DM Sans", sans-serif;
-    --foreground:white;
-    --text:#111827;
-    --primary:#1890ff;
-    --success:#22c55e;
-    --neutral:#111827;
-    --warning:#f59e0b;
-    --danger:#ef4444;
-    --border:#d1d5db;
+    --msr-font-family:"DM Sans", sans-serif;
+    --msr-color-foreground:white;
+    --msr-color-background:black;
+ 
+
+  --msr-color-primary: #1890ff;
+  --msr-color-primary-50:  color-mix(in srgb, white 95%, var(--msr-color-primary));
+  --msr-color-primary-100: color-mix(in srgb, white 90%, var(--msr-color-primary));
+  --msr-color-primary-200: color-mix(in srgb, white 80%, var(--msr-color-primary));
+  --msr-color-primary-300: color-mix(in srgb, white 65%, var(--msr-color-primary));
+  --msr-color-primary-400: color-mix(in srgb, white 45%, var(--msr-color-primary));
+  --msr-color-primary-500: var(--msr-color-primary);
+  --msr-color-primary-600: color-mix(in srgb, black 15%, var(--msr-color-primary));
+  --msr-color-primary-700: color-mix(in srgb, black 30%, var(--msr-color-primary));
+  --msr-color-primary-800: color-mix(in srgb, black 45%, var(--msr-color-primary));
+  --msr-color-primary-900: color-mix(in srgb, black 60%, var(--msr-color-primary));
+  --msr-color-primary-950: color-mix(in srgb, black 80%, var(--msr-color-primary));
+    
+    
+  --msr-color-gray: #6b7280;
+   --msr-color-gray-50:  color-mix(in srgb, white 95%, var(--msr-color-gray));
+  --msr-color-gray-100: color-mix(in srgb, white 90%, var(--msr-color-gray));
+  --msr-color-gray-200: color-mix(in srgb, white 80%, var(--msr-color-gray));
+  --msr-color-gray-300: color-mix(in srgb, white 65%, var(--msr-color-gray));
+  --msr-color-gray-400: color-mix(in srgb, white 45%, var(--msr-color-gray));
+  --msr-color-gray-500: var(--msr-color-gray);
+  --msr-color-gray-600: color-mix(in srgb, black 15%, var(--msr-color-gray));
+  --msr-color-gray-700: color-mix(in srgb, black 30%, var(--msr-color-gray));
+  --msr-color-gray-800: color-mix(in srgb, black 45%, var(--msr-color-gray));
+  --msr-color-gray-900: color-mix(in srgb, black 60%, var(--msr-color-gray));
+  --msr-color-gray-950: color-mix(in srgb, black 80%, var(--msr-color-gray));
+
+  --msr-color-red: #ef4444;
+  --msr-color-red-50:  color-mix(in srgb, white 95%, var(--msr-color-red));
+  --msr-color-red-100: color-mix(in srgb, white 90%, var(--msr-color-red));
+  --msr-color-red-200: color-mix(in srgb, white 80%, var(--msr-color-red));
+  --msr-color-red-300: color-mix(in srgb, white 65%, var(--msr-color-red));
+  --msr-color-red-400: color-mix(in srgb, white 45%, var(--msr-color-red));
+  --msr-color-red-500: var(--msr-color-red);
+  --msr-color-red-600: color-mix(in srgb, black 15%, var(--msr-color-red));
+  --msr-color-red-700: color-mix(in srgb, black 30%, var(--msr-color-red));
+  --msr-color-red-800: color-mix(in srgb, black 45%, var(--msr-color-red));
+  --msr-color-red-900: color-mix(in srgb, black 60%, var(--msr-color-red));
+  --msr-color-red-950: color-mix(in srgb, black 80%, var(--msr-color-red));
+
+  --msr-color-green: #22c55e;
+  --msr-color-green-50:  color-mix(in srgb, white 95%, var(--msr-color-green));
+  --msr-color-green-100: color-mix(in srgb, white 90%, var(--msr-color-green));
+  --msr-color-green-200: color-mix(in srgb, white 80%, var(--msr-color-green));
+  --msr-color-green-300: color-mix(in srgb, white 65%, var(--msr-color-green));
+  --msr-color-green-400: color-mix(in srgb, white 45%, var(--msr-color-green));
+  --msr-color-green-500: var(--msr-color-green);
+  --msr-color-green-600: color-mix(in srgb, black 15%, var(--msr-color-green));
+  --msr-color-green-700: color-mix(in srgb, black 30%, var(--msr-color-green));
+  --msr-color-green-800: color-mix(in srgb, black 45%, var(--msr-color-green));
+  --msr-color-green-900: color-mix(in srgb, black 60%, var(--msr-color-green));
+  --msr-color-green-950: color-mix(in srgb, black 80%, var(--msr-color-green));
+
+  --msr-color-amber: #f59e0b;
+  --msr-color-amber-50:  color-mix(in srgb, white 95%, var(--msr-color-amber));
+  --msr-color-amber-100: color-mix(in srgb, white 90%, var(--msr-color-amber));
+  --msr-color-amber-200: color-mix(in srgb, white 80%, var(--msr-color-amber));
+  --msr-color-amber-300: color-mix(in srgb, white 65%, var(--msr-color-amber));
+  --msr-color-amber-400: color-mix(in srgb, white 45%, var(--msr-color-amber));
+  --msr-color-amber-500: var(--msr-color-amber);
+  --msr-color-amber-600: color-mix(in srgb, black 15%, var(--msr-color-amber));
+  --msr-color-amber-700: color-mix(in srgb, black 30%, var(--msr-color-amber));
+  --msr-color-amber-800: color-mix(in srgb, black 45%, var(--msr-color-amber));
+  --msr-color-amber-900: color-mix(in srgb, black 60%, var(--msr-color-amber));
+  --msr-color-amber-950: color-mix(in srgb, black 80%, var(--msr-color-amber));
 }

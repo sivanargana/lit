@@ -57,7 +57,7 @@ export class Button extends LitElement {
       ><slot name="prefix" class="btn__prefix" @slotchange=${(e: any) => this.hasPrefix = this.checkSlot(e)}></slot>
         <slot class="btn__label" @slotchange=${(e: any) => this.hasLabel = this.checkSlot(e)}></slot>
         <slot name="suffix" class="btn__suffix" @slotchange=${(e: any) => this.hasSuffix = this.checkSlot(e)}></slot>
-         ${this.loading ? html`loading...` : nothing}
+         ${this.loading ? html`💡` : nothing}
        </${tag}>
     `;
   }
