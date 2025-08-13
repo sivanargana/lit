@@ -1,50 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit + TS</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./src/index.css" />
-    <script type="module" src="/src/my-element.ts"></script>
-    <script type="module" src="/src/sn-input.ts"></script>
-    <script type="module" src="/src/button/button.ts"></script>
-  </head>
-  <body>
-
-<h1>Variant</h1>
-    <sn-button disabled>Default</sn-button>
-    <sn-button>Default</sn-button>
-    <sn-button variant="primary">Primary</sn-button>
-    <sn-button variant="dashed">Dashed</sn-button>
-    <sn-button variant="text">Text</sn-button>
-    <sn-button variant="link">Link</sn-button>
- <h1>Sizes</h1>
-     <sn-button size="small">Small</sn-button>
-     <sn-button>Medium</sn-button>
-     <sn-button size="large">Large</sn-button>
- <h1>Shapes</h1>
-     <sn-button>Round</sn-button>
-     <sn-button shape="pill">Pill</sn-button>
-     <sn-button shape="circle"><span class="material-symbols-outlined">home</span></sn-button>
- <h1>Icon</h1>
-    <sn-button shape="circle"><span class="material-symbols-outlined">home</span></sn-button>
-    <sn-button variant="primary" shape="circle"><span class="material-symbols-outlined">home</span></sn-button>
-    <sn-button variant="dashed" shape="circle"><span class="material-symbols-outlined">home</span></sn-button>
-    <sn-button variant="text" shape="circle"><span class="material-symbols-outlined">home</span></sn-button>
-    <sn-button variant="link" shape="circle"><span class="material-symbols-outlined">home</span></sn-button>
-    <sn-button>
-      <span slot="prefix" class="material-symbols-outlined">search</span>
-      Search 
-    </sn-button>
-    <sn-button shape="pill"><span slot="prefix" class="material-symbols-outlined">home</span>Back<span slot="suffix" class="material-symbols-outlined">home</span>
-    </sn-button>
-    <sn-button shape="pill" prefix="$" suffix="#"> 
-      Amount 
-    </sn-button>
-
-    <h1>block</h1>
-        <sn-button block>Default</sn-button>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + Lit + TS</title>
+  <link rel="stylesheet" href="./src/index.css" /> 
+  <script type="module" src="/src/button/button.ts"></script>
+</head>
+<body>
+  <h3>Basic</h3>
+  <msr-button>Button</msr-button>
+  <h3>Variants</h3>
+  <msr-button variant="default">Default</msr-button>
+  <msr-button variant="primary">Primary</msr-button>
+  <msr-button variant="success">Success</msr-button>
+  <msr-button variant="neutral">Neutral</msr-button>
+  <msr-button variant="warning">Warning</msr-button>
+  <msr-button variant="danger">Danger</msr-button>
+  <h3>Sizes</h3>
+  <msr-button size="small">Small</msr-button>
+  <msr-button size="medium">Medium</msr-button>
+  <msr-button size="large">Large</msr-button>
+  <h3>Outlined</h3>
+  <msr-button variant="default" outline>Default</msr-button>
+  <msr-button variant="primary" outline>Primary</msr-button>
+  <msr-button variant="success" outline>Success</msr-button>
+  <msr-button variant="neutral" outline>Neutral</msr-button>
+  <msr-button variant="warning" outline>Warning</msr-button>
+  <msr-button variant="danger" outline>Danger</msr-button>
+  <h3>Pill </h3>
+  <msr-button size="small" pill>Small</msr-button>
+  <msr-button size="medium" pill>Medium</msr-button>
+  <msr-button size="large" pill>Large</msr-button>
+  <h3>Circle</h3>
+  <msr-button variant="default" size="small" circle>🔥</msr-button>
+  <msr-button variant="default" size="medium" circle>🔥</msr-button>
+  <msr-button variant="default" size="large" circle>🔥</msr-button>
+  <h3>Text</h3>
+  <msr-button variant="text" size="small">Text</msr-button>
+  <msr-button variant="text" size="medium">Text</msr-button>
+  <msr-button variant="text" size="large">Text</msr-button>
+  <h3>Link</h3>
+  <msr-button href="https://example.com/">Link</msr-button>
+  <msr-button href="https://example.com/" target="_blank">New Window</msr-button>
+  <msr-button href="/assets/images/wordmark.svg" download="shoelace.svg">Download</msr-button>
+  <msr-button href="https://example.com/" disabled>Disabled</msr-button>
+    <h3>Prefix & Suffix</h3>
+  <msr-button>
+    Both
+    <span slot="prefix">🔥</span>
+    <span slot="suffix">❯</span>
+  </msr-button>
+  <msr-button>
+    Prefix
+    <span slot="prefix">🔥</span> 
+  </msr-button>
+  <msr-button>
+    Suffix
+    <span slot="suffix">🔥</span> 
+  </msr-button>
+  <a href="" target=""></a>
+</body>
 </html>

@@ -1,13 +1,17 @@
-/* @import "tailwindcss";
-body{
-    font-family: sans-serif;
-}
- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
  body{
+      font-family: "DM Sans", sans-serif;
     background-color: #eee;
  }
 :root{
+    --font-family:"DM Sans", sans-serif;
     --foreground:white;
+    --text:#111827;
     --primary:#1890ff;
-    --border:#ccc;
+    --success:#22c55e;
+    --neutral:#111827;
+    --warning:#f59e0b;
+    --danger:#ef4444;
+    --border:#d1d5db;
 }
