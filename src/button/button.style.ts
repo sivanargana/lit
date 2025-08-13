@@ -79,7 +79,7 @@ export default css`
   border-color:var(--msr-color-gray-300);
   color:var(--msr-color-gray-900);
   }
-    .btn.btn--default:hover{
+    .btn:hover.btn--default{
     background-color:var(--msr-color-primary-50);
     border-color:var(--msr-color-primary-400);
     color:var(--msr-color-primary-900);
@@ -89,26 +89,52 @@ export default css`
   border-color:var(--msr-color-primary-500);
   color:white;
   }
+    .btn:hover.btn--primary{
+      background-color:var(--msr-color-primary-600);
+      border-color:var(--msr-color-primary-600);
+    }
   .btn.btn--success{
   background-color:var(--msr-color-green-500);
   border-color:var(--msr-color-green-500);
   color:white;
   }
+     .btn:hover.btn--success{
+      background-color:var(--msr-color-green-600);
+      border-color:var(--msr-color-green-600);
+    }
   .btn.btn--neutral{
   background-color:var(--msr-color-gray-500);
   border-color:var(--msr-color-gray-500);
   color:white;
   }
+
+     .btn:hover.btn--neutral{
+      background-color:var(--msr-color-gray-600);
+      border-color:var(--msr-color-gray-600);
+    }
   .btn.btn--warning{
   background-color:var(--msr-color-amber-500);
   background-color:var(--msr-color-amber-500);
   color:black;
   }
+
+   .btn:hover.btn--warning{
+      background-color:var(--msr-color-amber-600);
+      border-color:var(--msr-color-amber-600);
+    }
+
   .btn.btn--danger{
   background-color:var(--msr-color-red-500);
   border-color:var(--msr-color-red-500);
   color:white;
   }
+
+   .btn:hover.btn--danger{
+      background-color:var(--msr-color-red-600);
+      border-color:var(--msr-color-red-600);
+    }
+
+
   .btn.btn--default.btn--outline{
   background-color:transparent;
   border-color:var(--msr-color-gray-300);
