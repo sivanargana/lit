@@ -9,10 +9,13 @@
   <script type="module" src="/src/button/index.ts"></script>
   <script type="module" src="/src/spinner/index.ts"></script>
   <script type="module" src="/src/card/index.ts"></script>
+  <script type="module" src="/src/code/index.ts"></script>
 </head>
 <body>
  
 <div class="max-w-[1000px] mx-auto p-5 flex flex-col gap-5">
+
+ 
  
   <msr-card>
     <div slot="header">Variants</div>
@@ -23,6 +26,14 @@
     <msr-button variant="neutral">Neutral</msr-button>
     <msr-button variant="warning">Warning</msr-button>
     <msr-button variant="danger">Danger</msr-button>
+
+
+       <msr-code slot="footer" code='<msr-button variant="default">Default</msr-button>
+    <msr-button variant="primary">Primary</msr-button>
+    <msr-button variant="success">Success</msr-button>
+    <msr-button variant="neutral">Neutral</msr-button>
+    <msr-button variant="warning">Warning</msr-button>
+    <msr-button variant="danger">Danger</msr-button>'></msr-code>
   </msr-card>
   <msr-card>
      <div slot="header">Sizes</div> 
