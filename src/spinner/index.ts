@@ -1,11 +1,11 @@
  
-import { LitElement, html } from "lit";
+import { html } from "lit";
 import { customElement } from "lit/decorators.js";
-import hostCss from "../host/style";
 import componentCss from "./style";
+import { Host } from "../host";
 @customElement("msr-spinner")
-export class Spinner extends LitElement {
-  static styles = [hostCss,componentCss];
+export class Spinner extends Host {
+  static msrStyles = [componentCss];
   render() { 
     return html`
     <div class="spinner"></div>  

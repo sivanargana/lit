@@ -1,13 +1,12 @@
 @import "tailwindcss";
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
+ 
  body{
-      font-family: "DM Sans", sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-gray-50);
  
  }
 :root{
-    --msr-font-family:"DM Sans", sans-serif;
+    --msr-font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --msr-color-foreground:white;
     --msr-color-background:black;
  /* primary */
@@ -23,17 +22,17 @@
   --msr-color-primary-900: var(--color-blue-900);
   --msr-color-primary-950: var(--color-blue-950);
 /* gray */
-  --msr-color-gray-50: var(--color-gray-50);
-  --msr-color-gray-100: var(--color-gray-100);
-  --msr-color-gray-200: var(--color-gray-200);
-  --msr-color-gray-300: var(--color-gray-300);
-  --msr-color-gray-400: var(--color-gray-400);
-  --msr-color-gray-500: var(--color-gray-500);
-  --msr-color-gray-600: var(--color-gray-600);
-  --msr-color-gray-700: var(--color-gray-700);
-  --msr-color-gray-800: var(--color-gray-800);
-  --msr-color-gray-900: var(--color-gray-900);
-  --msr-color-gray-950: var(--color-gray-950);
+  --msr-color-gray-50: var(--color-neutral-50);
+  --msr-color-gray-100: var(--color-neutral-100);
+  --msr-color-gray-200: var(--color-neutral-200);
+  --msr-color-gray-300: var(--color-neutral-300);
+  --msr-color-gray-400: var(--color-neutral-400);
+  --msr-color-gray-500: var(--color-neutral-500);
+  --msr-color-gray-600: var(--color-neutral-600);
+  --msr-color-gray-700: var(--color-neutral-700);
+  --msr-color-gray-800: var(--color-neutral-800);
+  --msr-color-gray-900: var(--color-neutral-900);
+  --msr-color-gray-950: var(--color-neutral-950);
 /* red */
   --msr-color-red-50: var(--color-red-50);
   --msr-color-red-100: var(--color-red-100);

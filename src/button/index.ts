@@ -1,14 +1,14 @@
-import { LitElement, nothing } from "lit";
+import {  nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { html, literal } from "lit/static-html.js";
-import "../spinner/index";
-import hostCss from "../host/style";
+import "../spinner/index"; 
 import componentCss from "./style";
+import { Host } from "../host";
 @customElement("msr-button")
-export class Button extends LitElement {
-  static styles = [hostCss,componentCss];
+export class Button extends Host {
+  static msrStyles = [componentCss];
   @state() private hasPrefix = false;
   @state() private hasSuffix = false;
   @state() private hasLabel = false;
