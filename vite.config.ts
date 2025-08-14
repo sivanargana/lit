@@ -4,15 +4,15 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-   base: '/lit/',
+   base: '/msr/',
     build: {
     outDir: 'docs',  
     emptyOutDir: true,
       rollupOptions: {
       output: {
-        entryFileNames: 'msr-web-component.js',     
-        chunkFileNames: 'msr-web-component.js', 
-        assetFileNames: 'msr-web-component.[ext]'
+        entryFileNames: 'web-components.js',     
+        chunkFileNames: 'web-components.js', 
+        assetFileNames: 'web-components.[ext]'
       }
     }
     }
