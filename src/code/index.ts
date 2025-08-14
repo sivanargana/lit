@@ -1,4 +1,4 @@
-import { css, html } from "lit";
+import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import componentCss from "./style";
 import { Host } from "../host";
