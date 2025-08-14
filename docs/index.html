@@ -1,30 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hello Eleventy</title>
-   <link rel="stylesheet" href="web-component.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + Lit + TS</title> 
+  <script type="module" crossorigin src="/msr/web-components.js"></script>
+  <link rel="stylesheet" crossorigin href="/msr/web-components.css">
 </head>
 <body>
-  <header>
-    <h1>Hello Eleventy</h1>
-  </header>
+ 
+<div class="max-w-[1000px] mx-auto p-5 flex flex-col gap-5">
+    <msr-code slot="footer" code='<script type="module" src="https://sivanargana.github.io/msr/web-components.js"></script>
+<link href="https://sivanargana.github.io/msr/web-components.css" rel="stylesheet" />'></msr-code>
+  
+ 
+ 
+  <msr-card>
+    <div slot="header">Variants</div>
+ 
+    <msr-button variant="default">Default</msr-button>
+    <msr-button variant="primary">Primary</msr-button>
+    <msr-button variant="success">Success</msr-button>
+    <msr-button variant="neutral">Neutral</msr-button>
+    <msr-button variant="warning">Warning</msr-button>
+    <msr-button variant="danger">Danger</msr-button>
 
-  <main>
-    <p>This is a simple Markdown page.</p>
-<ul>
-<li>Eleventy will convert this to HTML.</li>
-<li>You can use <strong>Markdown syntax</strong> freely.</li>
-<li>Front matter (above) sets page variables like <code>title</code>.</li>
-</ul>
-<h2>Example Code</h2>
-<pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello Eleventy!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
-  </main>
-
-  <footer>
-    <p>© 2025</p>
-  </footer>
+       <msr-code slot="footer" code='<msr-button variant="default">Default</msr-button>
+    <msr-button variant="primary">Primary</msr-button>
+    <msr-button variant="success">Success</msr-button>
+    <msr-button variant="neutral">Neutral</msr-button>
+    <msr-button variant="warning">Warning</msr-button>
+    <msr-button variant="danger">Danger</msr-button>'></msr-code>
+  </msr-card>
+  <msr-card>
+     <div slot="header">Sizes</div> 
+    <msr-button size="small">Small</msr-button>
+    <msr-button size="medium">Medium</msr-button>
+    <msr-button size="large">Large</msr-button>
+  </msr-card>
+  <msr-card>
+     <div slot="header">Outlined</div>  
+    <msr-button variant="default" outline>Default</msr-button>
+    <msr-button variant="primary" outline>Primary</msr-button>
+    <msr-button variant="success" outline>Success</msr-button>
+    <msr-button variant="neutral" outline>Neutral</msr-button>
+    <msr-button variant="warning" outline>Warning</msr-button>
+    <msr-button variant="danger" outline>Danger</msr-button>
+  </msr-card>
+  <msr-card>
+        <div slot="header">Pill</div>   
+    <msr-button size="small" pill>Small</msr-button>
+    <msr-button size="medium" pill>Medium</msr-button>
+    <msr-button size="large" pill>Large</msr-button>
+  </msr-card>
+  <msr-card>
+     <div slot="header">Circle</div>  
+    <msr-button variant="default" size="small" circle>🔥</msr-button>
+    <msr-button variant="default" size="medium" circle>🔥</msr-button>
+    <msr-button variant="default" size="large" circle>🔥</msr-button>
+  </msr-card>
+  <msr-card>
+    <div slot="header">Text</div>   
+    <msr-button variant="text" size="small">Text</msr-button>
+    <msr-button variant="text" size="medium">Text</msr-button>
+    <msr-button variant="text" size="large">Text</msr-button>
+  </msr-card>
+  <msr-card>
+     <div slot="header">Link</div>    
+    <msr-button href="https://example.com/">Link</msr-button>
+    <msr-button href="https://example.com/" target="_blank">New Window</msr-button>
+    <msr-button href="/assets/images/wordmark.svg" download="shoelace.svg">Download</msr-button>
+    <msr-button href="https://example.com/" disabled>Disabled</msr-button>
+  </msr-card>
+    <msr-card>
+       <div slot="header">Prefix & Suffix</div>    
+        <msr-button>
+      Both
+      <span slot="prefix">🔥</span>
+      <span slot="suffix">❯</span>
+        </msr-button>
+        <msr-button>
+      Prefix
+      <span slot="prefix">🔥</span> 
+        </msr-button>
+        <msr-button>
+      Suffix
+      <span slot="suffix">🔥</span> 
+        </msr-button>
+        <a href="" target=""></a>
+    </msr-card>
+      <msr-card>
+        <div slot="header">Loading</div>     
+        <msr-button variant="default" loading>Default</msr-button>
+        <msr-button variant="primary" loading>Primary</msr-button>
+        <msr-button variant="success" loading>Success</msr-button>
+        <msr-button variant="neutral" loading>Neutral</msr-button>
+        <msr-button variant="warning" loading>Warning</msr-button>
+        <msr-button variant="danger" loading>Danger</msr-button>
+      </msr-card>
+</div>
 </body>
 </html>
